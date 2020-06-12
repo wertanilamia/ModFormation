@@ -1,0 +1,114 @@
+<div class="container">
+   
+    <form #upcom="ngForm" [formGroup]="upcommandeForm" (ngSubmit)=" updateCom()" >
+        <div class="D0">
+            <h1>إلى السيد مدير مكتب</h1>
+            <div class="form-group">
+                <input type="text" name="organismeformateur" id="organismeformateur" class="form-control" formControlName="organismeformateur"/>
+                </div>
+           </div>
+         
+    <br/>
+    <br/>
+    <br/>
+  <div class="d4">
+        <p class="para1"><span style="text-decoration: underline;">  .الموضوع</span><span>:حول المشاركة في دورة تكوينية </span></p>
+      </div>
+        <br/>
+        <div class="d2">
+       <div class="row">
+       <p>اطار بديوان الطيران المدني و المطارات </p>
+        <div class="form-group">
+            <input type="text" class="form-control" name="prenom" id="prenom" formControlName="prenom" placeholder="اللقب"/>
+        </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="nom" id="nom" formControlName="nom" placeholder="الاسم"/>
+             </div>
+           <p> يشرفني أن أطلب منكم تسجيل السيد</p>
+          
+         </div>
+    </div>
+    <br>
+    <div class="d8">
+        <div class="row">
+        <div class="form-group">
+            <input type="text" class="form-control" name="theme" id="theme" formControlName="theme"/>
+            </div>
+         <p> :في الدورة التكوينيةحول</p>
+        </div>
+    </div>
+         <div class="d1">
+         <div class="row">
+              <p>.</p>
+            <div class="form-group">
+             <input type="date" name="datefinF" id="datefinF" class="form-control" formControlNam="datefinF"/> 
+            </div>
+            الى غاية
+            <div class="form-group">
+          <input type="date" name="datedebutF" id="datedebutF" class="form-control" formControlName="datedebutF"/> 
+       </div>
+       <p>والتي سيتم تنظيمها من  </p>
+       </div>
+    </div>
+<br/>
+<div class="d9">
+    <div class="row">
+    
+    <div class="form-group">
+        <input type="text" name="depenseprevisionnelle" id="depenseprevisionnelle" class="form-control"formControlName="depenseprevisionnelle"/>   
+       </div>
+<p class="para3"> يتعهد ديوان الطيران المدني و المطارات بدفع معاليم التسجيل التي حددت ب  
+</p>
+</div>
+</div>
+<div class="d11">
+    <div class="row">
+        <p class="d10"> .دون اعتبار الاداء على القيمة المضافة) لللفرد الواحد)</p>
+    </div>
+</div>
+
+
+<br/>
+    <div class="a">.و السلام</div>
+    <br/>
+
+<div class="b">
+      <select name="FM" id="FM">
+    <option value="chefF" >رئيسة دائرة التكوين</option>
+    <option value="chefM">رئيس دائرة التكوين</option>
+</select>
+</div>
+<div class="c">
+    <div class="form-group">
+    <input type="text" name="chefdepartementformation" id="chefdepartementformation" class="form-control" formControlName="chefdepartementformation"/>
+    </div>
+</div>
+<br/>
+<br/>
+
+
+    <div class="d7">
+         <div class="row">
+              <div class="form-group">
+                   <input type="text" name="dateEnvoi" id="dateEnvoi"  class="form-control" formControlName="dateEnvoi"/>
+              </div>
+       <p> أرسلت في</p>
+            </div>
+    </div>
+
+
+<br/>
+
+<br/>
+<br/>
+<div class="d6">
+<div class="from-row">
+    <button  class="btn btn-success" type="submit" >تسجيل</button>
+    <button  class="btn btn-secondary" [routerLink]="['/listcommande']"> إلغاء</button>
+</div>
+</div>
+
+<br/>
+
+</form>
+</div>

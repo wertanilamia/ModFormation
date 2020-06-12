@@ -1,0 +1,29 @@
+h1{
+   text-align: left;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: 10%;
+text-decoration: underline;
+font-style: italic;
+}
+table{
+    border-collapse: collapse;
+    width: 70%;
+    margin-left:10em;
+    border-color: black;
+    
+}
+
+tr{
+    border: 1px solid black;
+    border-collapse: collapse;   
+}
+button{
+    margin: 5px;
+}
+.D0{
+    margin-left: 80px;
+}
+a{
+    color: blue;
+}

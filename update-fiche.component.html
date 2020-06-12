@@ -1,0 +1,180 @@
+<div class="container">
+  <form [formGroup]="updatefiche" #UpF="ngForm" (ngSubmit)="update(UpF.value)"  >
+    <div style="width:49,9em;height: 40px; padding-top: 0%; padding-bottom: 10px; border:1px solid blue; background-color: blue;">
+      <h1>FICHE D'IDENTIFICATION DE BESOINS EN FORMATION</h1>
+  </div>
+<br>
+<p class="P1"> UNITE D'AFFECTATION:</p>
+  <br/>
+  <div class="form-group">
+    <label for="DirectionAeroport">Direction/Aéroport: </label><br/>
+  <select name="direction" id="direction" formControlName="DirectionAeroport">
+
+    <option >Direction de l’audit interne et l’inspection</option>
+    <option >Direction de  communication et des relations publiques</option>
+    <option >Direction de l’organisation et gestion de la qualité</option>
+     <option > Direction de Administrative et financière</option>
+     <option >Direction centrale des systèmes informatiques</option> 
+     <option > Direction centrale des Etudes et travaux</option>
+     <option > Direction centrale de l’exploitation</option>
+     <option > Direction centrale des équipements</option>
+     <option > Direction centrale du trafic</option>
+     <option > Direction des ressources humaines</option>
+     <option > Direction de config des courts des avions</option>
+     <option > Direction de suivi de qualité et des certifications</option>
+     <option > Direction des affaires sociales et médicales</option>
+     <option > Direction de l’architecture</option>
+     <option > direction des exploitations des aéroports</option>
+     <option > Direction des équipements de navigation aériennne</option>
+     <option > Direction de la navigation aérienne</option>
+     <option > Direction des affaires juridiques</option>
+     <option > Direction de l’informatique gestion</option>
+     <option > Direction des études techniques</option>
+     <option > Direction de la sureté et de la sécurité</option>
+     <option > Direction des équipements et de communication</option>
+     <option > Direction de la navigabilité</option>
+     <option > Direction d’approvisionnement Et gestion de stock</option>
+     <option > Direction de l’informatique des aéroports</option>
+     <option > Direction de l’architecture d’intérieur</option>
+     <option > Direction des affaires commerciales</option>
+     <option > Direction des intérêts électriques </option>
+     <option > Direction de la sureté de la navigation</option>
+     <option> Direction Financières et comptable</option>
+     <option > Direction des outils et des réseaux informatiques</option>
+     <option > Direction de suivi et de contrôle de projet </option>
+     <option > Direction du développement durable </option>
+     <option > Direction de la maintenance générale</option>
+    </select>
+  </div>
+<label for="Division" > Division:</label>
+<br>
+<div class="form-group">
+ <select name="Division" id="Division" formControlName="Division"> 
+<option >Division bureau d'ordre et archive</option> 
+<option >Division AIGK</option>
+<option >Division AIST</option>
+<option >Division AITN</option>
+</select>
+</div>
+<br/>
+
+  <div class="form-group col-4">
+    <label for="Service">Service:</label>
+    <input type="text"    class="form-control" formControlName="Service" name="Service"> 
+</div>
+
+<p class="P2">IDENTIFIANTS DU BENEFICIAIRE</p>
+<div class="form-row">
+    <div class="form-group col-4">
+
+    <label for="matricule">Matricule: </label>
+    <input type="text"   class="form-control" formControlName="matricule"  name="matricule" >
+</div>
+</div>
+
+<div class="form-row">
+  <div class="form-group col-4">
+    <label for="nom" > Nom:</label>
+    <input type="text"  formControlName="nom"  class="form-control"   name="nom">
+  </div>
+
+  <div class="form-group col-4">
+    <label for="prenom" > Prénom:</label>
+    <input type="text"   class="form-control"  formControlName="prenom" name="prenom"  >
+</div>
+</div>
+
+<div class="form-row">
+  <div class="form-group col-4">
+    <label for="emploi" > Emploi:</label>
+    <input type="text"   class="form-control" formControlName="emploi"  name="emploi">
+  </div>
+</div>
+<br/>
+<div class="form-row">
+  <div class="form-group col-4">
+  <label>Taches Principales: </label>
+  <input type="text"   class="form-control" formControlName="tachesprincipales" name="tachesprincipales" >
+</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-4">
+  <label for="theme">Théme proposé: </label>
+  <input type="text"  class="form-control" formControlName="theme"  name="theme" >
+</div>
+</div>
+
+<h2 class="titre1"> Compétences actuelles nécessaires</h2><br/>
+ <div class="form-row">
+<p>
+  <label class="label1"> Niveau actuel:</label> 
+   <select name="niveau-actuel" id="niveau-actuel">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+     <option value="4">4</option>
+</select>
+
+  <label class="label2">Niveau requis:</label>
+  <select name="niveau-requis" id="niveau-requis">
+   <option value="1">1</option>
+   <option value="2">2</option>
+   <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+</p>
+</div>
+<br/>
+<h2 class="titre2"> Nouvelles Compétences à acquérir</h2><br/>
+<div class="form-row">
+  <p>
+<label class="label3"> Niveau actuel:</label> 
+<select name="niveau-actuel" id="niveau-actuel">
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+
+<label class="label4">Niveau requis:</label>
+<select name="niveau-requis" id="niveau-requis">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+ <option value="4">4</option>
+</select>
+</p>
+</div>
+
+<p class="P4">
+  Type de formation demandé:
+  <select name="type de formation" id="type de formation">
+
+    <option value="intra-entreprise">Intra-Entreprise</option>
+    <option value="inter-entreprise">Inter-Entreprise</option>
+    <option value="cour du soir">Cour Du Soir</option>
+     <option value="a l'etranger"> A l'étranger</option>
+     <option value="e-learning">E-learning</option> 
+     <option value="diplomante"> Diplomante</option>
+  </select>
+</p>
+<h2 class="titre3">Niveau demandé:</h2> 
+<p class="P3">
+  <br/>
+<!--l'attribut name aide a identifier par la suite la case qui a était cocher-->
+<input type="checkbox" name="de base" id="de base"/>
+<label for="de base"> De Base</label><br/>
+<input type="checkbox" name="De Perfectionnement" id="De Perfectionnement"/>
+<label for="De Perfectionnement"> De Perfectionnement</label><br/>
+<input type="checkbox" name="Pousse" id="Pousse"/>
+<label for="Pousse">Pousse</label>
+</p>
+<br>
+<br>
+<div class="btn">
+<button class="btn btn-primary" type="submit">Enregistre</button>
+<br>
+<button class="btn btn-danger"> Annuler</button>
+</div>
+
+

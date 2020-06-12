@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="card">
+    <div class="all" >
+        <div class="part1">
+            <form class="form-inline" style="margin-top: 20px; margin-left: 15px;">
+                <label> Chercher une direction:</label>
+                <input class="form-control mr-sm-2" type="search" placeholder="Nom de direction" aria-label="Search" style="margin-left: 10px;">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <br>
+              <form class="form-inline" style="margin-left: 15px; margin-bottom: 20px;">
+                <label >Chercher une fiche:</label>
+                <input class="form-control mr-sm-2" type="search" placeholder="matricule" aria-label="Search" style="margin-left:38px "/>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+        </div>
+        <div class="part2">
+                <button type="button" class="btn btn-outline-warning" style="margin-bottom: 25px;   margin-left: 300px;" >Mettre à jour</button>
+                <br/>
+                <button type="button" class="btn btn-outline-danger" style=" margin-left: 300px; ">Supprimer</button>
+        </div>
+       
+    </div> 
+</div>
+   <div class="card">
+       <div style="margin-left: 10px; margin-bottom: 10px; margin-top: 10px;">
+          <input type="text"> 
+       </div>
+    <table class="table StandardTable table-sm">
+        <thead>
+        <th >Domaine</th>
+        <th >Thème</th>
+        <th >Durée en j</th>
+        <th >durée en h</th>
+        <th >Organisation</th>
+        <th >Organisme formateur</th>
+        <th >Nom</th>
+        <th >Prénom</th>
+        <th >Mat</th>
+        <th >Qualification</th>
+        <th >Affectation</th>
+        <th >Dépenses prévisionnelles</th>
+        <th >Nbre d'agents</th>
+    </thead>
+    <tbody>
+               
+        <tr *ngFor="let p of listplan"  >
+        <th>{{p.domaine}}</th>
+        <th>..</th>
+        <th>{{p.dureeJ}}</th>
+        <th>{{p.dureeH}}</th>
+        <th>..</th>
+        <th>{{p.organismeformateur}}</th>
+        <th>..</th>
+        <th>..</th>
+        <th>..</th>
+        <th>..</th>
+        <th>..</th>
+        <th>{{p.depenseprevisionnelle}}</th>
+        <th>..</th>
+        </tr>
+   
+    </tbody>
+    </table>
+        
+   </div>
+</div>
+</div>

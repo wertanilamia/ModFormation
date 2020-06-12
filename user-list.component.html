@@ -1,0 +1,121 @@
+
+   <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Liste des utilisateurs <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Droits d'accès</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Notifications</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Dashbord</a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav>
+   <br/>
+      <div class="jumbotron">
+        <div class="card">
+          <h1> Liste des utilisateurs</h1>
+        </div>
+          
+    <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              
+                <input  type="text" [(ngModel)]="mcSearch" placeholder="Search" aria-label="Search"/>
+                <button   style="width: 90px; height: 35;" class="badge badge-pill badge-info"  (click)="chercherUser()">Search</button>
+            </div>
+            <div class="col text-right">
+              <button type="button" style="width: 90px; height: 35;" class="badge badge-pill badge-success"  [routerLink]="['/adduser']">Ajouter</button>
+            </div>
+          
+             </div>  
+         </div>
+     </div>
+     <div class="card">
+       <div class="card-body">
+    
+    <table  class="table table-bordered" >
+<thead>
+<tr class=div1>
+    <th class="1">ID</th>
+    <th class="2">Nom</th>
+    <th  class="3">Prénom</th>
+    <th  class="4">Identifiant</th>
+  
+   
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let user of userlist?.content">
+    
+    <td>{{user.id}}</td>
+    <td>{{user.nom}}</td>
+    <td>{{user.prenom}}</td>
+    <td>{{user.identifiant}}</td>
+    <td class="text-right">
+        <button style="width: 90px; height: 35px;"  class="badge badge-pill badge-warning" (click)="onupdateUser(user.id)" >Editer</button>
+        <button  style="width: 90px; height: 35px;" class="badge badge-pill badge-danger"  (click)="onDeleteUser(user)">Supprimer</button>
+        <button style="width: 90px; height: 35px;"  class="badge badge-pill badge-info"  data-toggle="modal" data-target="#details" >Détails</button>
+    </td>
+</tr>
+
+<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Détails utilisateur</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="form-group">
+            <label  class="control-label">Nom:</label>
+           <label ></label>
+          </div>
+          <div class="form-group">
+            <label  class="control-label">Prénom:</label>
+          </div>
+          <div class="form-group">
+            <label  class="control-label">Identifiant:</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">retour</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</tbody>
+    </table>
+   
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+
+</div>
+
+
+
+

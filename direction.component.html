@@ -1,0 +1,38 @@
+<div class="container">
+ <form [formGroup]="directionform" >
+     <div class="card">
+         <div class="row">
+             
+<table class="table StandardTable table-sm">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom de Direction</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of listdirection?.content">
+            <td>{{d.idirect}}</td>
+            <td>{{d.nomdirect}}</td>
+            <td>
+              <input type="checkbox" name="directcheck" id="directcheck">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="form-group">
+    <input type="text"   class="form-control"  formControlName="nomdirection" name="nomdirection" placeholder="Nom de direction"  >
+</div>
+<button class="btn btn-primary" (click)="onSave()">Ajouter</button>
+    <br/>
+    <button class="btn btn-warning"> Modifier</button>
+    <br/>
+   
+   
+</div>
+
+     </div>
+   
+ </form>
+</div>

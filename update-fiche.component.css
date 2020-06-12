@@ -1,0 +1,81 @@
+h1{
+    font-size: 18px;
+       text-align: center;
+       margin-top: 10px;
+       color: white;
+       font-style: italic;
+   }
+   
+   h2{
+       font-size: 15px;
+       text-decoration: underline;
+   }
+   .P1{
+       text-indent:30px ;
+       text-decoration: underline;
+       font-weight: bold;
+       margin-left: 60px;
+      
+   }
+   .P2{
+       text-indent:30px ;
+       text-decoration: underline;
+       font-weight: bold; 
+       margin-left: 45px; 
+   }
+   
+   .P4{
+       margin-left: 90px;
+   }
+   form{
+     margin-left: 18%;
+       border-color: blue;
+       border-style: solid;
+      
+       width:50em;
+   }
+   input{
+       margin-left:90px;
+   }
+   label{
+       
+       margin-left: 90px;
+   }
+   select{
+       margin-left: 10px;
+   }
+   .label1{
+       margin-left: 120px;
+   }
+   .label2{
+       margin-left: 15px;
+   }
+   .label3{
+       margin-left: 120px;
+   }
+   .label4{
+       margin-left: 15px;
+   }
+   .titre1{
+       margin-left: 75px;
+       padding-left: 20px;
+   }
+   .titre2{
+       margin-left: 75px;
+       padding-left: 20px;
+   }
+   .titre3{
+       margin-left: 75px;
+       padding-left: 20px;
+   }
+   
+   button{
+       margin-left: 10em;
+   }
+   .D2{
+       margin-left: 30%;
+   }
+   button{
+    width: 180%;
+    margin-bottom: 10px;
+}

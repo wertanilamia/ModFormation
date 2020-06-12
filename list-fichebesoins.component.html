@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="panel panel-primary">
+        <div class=" panel panel-heading">
+         <h1>Liste des fiches de besoins</h1>
+          
+        </div>
+        <br/>
+        <div class="DF">
+         <div class="panel-body">
+             
+             <div class="form-group"> 
+                <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>  
+                  <input type="text" [(ngModel)]="motCle" />
+                 <button class="btn btn-primary" (click)="chercher()">Chercher</button>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col">
+                     <table class=" table table-hover">
+                         <thead>
+                             <tr>
+                                 <th>ID</th>
+                                 <th>Nom</th>
+                                 <th>Prénom</th>
+                                 <th>Matricule</th>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr *ngFor="let f of listfiche?.content">
+                                 <td>{{f.id}}</td>
+                                 <td>{{f.nom}}</td>
+                                 <td>{{f.prenom}}</td>
+                                 <td>{{f.matricule}}</td>
+                                 <td>
+                                  <a (click)="onEditFiche(f.id)" class="clickable">mise à jour</a>
+                                 </td>
+                                <td>
+                                    <a (click)="onDeleteFiche(f)" class="clickable"> Supprimer</a>
+                                </td>
+                             </tr>
+                            </tbody>
+                     </table>
+                     <nav aria-label="Pagination">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item " aria-current="page" *ngFor="let p of pages; let i=index" >
+                            <span class="page-link">
+                                <a  class="clickable" (click)="gotoPage(i)">{{i}}</a> 
+                              </span>
+                            
+                          </li>
+                        </ul>
+                    </nav>
+                    </div>
+             </div>
+         </div>
+
+
+        
+    </div>
+</div>
+

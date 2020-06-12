@@ -1,0 +1,40 @@
+.StandardTable thead th{
+    background: lightgray;
+}
+.StandardTable thead th:first-of-type{
+    border-top-left-radius: 10px;
+}
+.StandardTable thead th:last-of-type{
+    border-top-right-radius: 10px;
+}
+.StandardTable{
+    width: 75%;
+    height: 60%;
+    margin-top: 20px;
+    margin-left: 45px;
+    margin-right: 30px;
+}
+.panel-heading{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+}
+a{
+   margin-left: 20px;
+   margin-right: 20px;
+   padding-left: 5px;
+   padding-right: 5px;
+}
+button{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.c1{
+    margin-left: 800px;
+    margin-bottom: 150px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+}

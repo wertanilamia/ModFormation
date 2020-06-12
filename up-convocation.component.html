@@ -1,0 +1,104 @@
+<div class="container">
+   
+    <form #c="ngForm" [formGroup]="upconvocationForm"  (ngSubmit)="editConvocation()">
+     <h1>دعوة</h1>
+    <br/>
+    <br/>
+<div class="d4">
+    <p class="para1"><span>  .الموضوع</span>:حول المشاركة في دورة تكوينية داخل المؤسسة </p>
+  </div>
+    <br/>
+    <div class="d2">
+   <div class="row">
+       <p> قد تمت برمجتها خلال الفترة </p>
+       <div class="form-group">
+       <input type="text" class="form-control" name="theme" id="theme" formControlName="theme">
+       </div>
+     <p class="para2">يشرفني إعلامكم أن الدورة التكوينية داخل المؤسسة حول موضوع
+     </div>
+</div>
+     <div class="d1">
+     <div class="row">
+          <p>.</p>
+        <div class="form-group">
+        <input type="text" name="datedebut" id="datedebut" class="form-control" >
+        </div>
+        الى غاية
+        <div class="form-group">
+   <input type="text" name="datefin" id="datefin" class="form-control" >
+   </div>
+   <p>الممتدة  من  </p>
+   </div>
+</div>
+<br/>
+<br/>
+<div class="row">
+<p class="para3">   لذا نطلب منكم دعوة منظوريكم للمشاركة في هذه الدورات التكوينية خلال الفترات 
+     المذكورة و التي سيتم إنجازها
+</p>
+</div>
+<div class="d3">
+<div class="row">
+    <p>.</p>
+    <div class="form-group">
+     <input type="text" name="heure" id="heure" class="form-control" formControlName="heure">    
+    </div>
+    <p> بداية من الساعة </p>
+     <div class="form-group">
+          <input type="text" name="lieux" id="lieux" class="form-control" formControlName="lieux" >   
+         </div>
+         <p>لكائن ب</p>
+     <div class="form-group">
+     <input type="text" name="orgformateur" id="orgformateur" class="form-control" formControlName="orgformateur">
+     </div>
+     <p>بمركز التكوين</p>
+</div>
+</div>
+<br/>
+     <div class="a">.و السلام</div>
+     <br/>
+ <div class="b">
+       <select name="FM" id="FM">
+     <option value="chefF" >رئيسة دائرة التكوين</option>
+     <option value="chefM">رئيس دائرة التكوين</option>
+</select>
+</div>
+<div class="c">
+     <div class="form-group">
+     <input type="text" name="chefdepartementformation" id="chefdepartementformation" class="form-control" formControlName="chefdepartementformation" >
+     </div>
+</div>
+<br/>
+<br/>
+<div class="d5">
+     <div class="row">
+          <div class="form-group">
+               <label for="nbreparticipant">عدد المشاركين</label>
+           <input type="text" name="nbreparticipant" id="nbreparticipant" class="form-control" formControlName="nbreparticipant" >
+          </div>
+      </div>
+     </div>
+     
+          <div class="d7">
+               <div class="row">
+                    <div class="form-group">
+                         <label for="dateEnvoi">أرسلت في</label>
+                         <input type="text" name="dateEnvoi" id="dateEnvoi"  class="form-control" formControlName="dateEnvoi" >
+                        
+                    </div>
+               </div>
+          </div>
+<br/>
+<p class="para4"><span>:ملاحظة</span> الرجاء منكم تأكيد حضور عدد المشاركين المذكور أعلاه و في صورة عدم إمكانية توفير العدد المطلوب من المشاركين يتعين عليكم إعلام دائرة التكوين قبل  يومين
+من تاريخ إنجاز الدورة حتى يتسنى لنا سد الشغور الحاصل لتجنب الإشكاليات التعاقدية مع المزود,</p>
+   <br/>
+<br/>
+<br/>
+<div class="d6">
+<div class="from-row">
+     <button  class="btn btn-success" type="submit" >إرسال</button>
+     <button  class="btn btn-secondary"> إلغاء</button>
+</div>
+</div>
+</form>
+</div>

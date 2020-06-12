@@ -1,0 +1,40 @@
+
+form{
+    width:80%;
+    padding: 80px;
+    background: grey;
+    border: black;
+    margin: 80px;
+    margin-left: 30px;
+}
+.form-group{
+    margin-bottom: 25px;
+
+}
+.form-group input{
+    height: 42px;
+    border-radius: 5px;
+    border: 0;
+    font: size 18px; 
+    letter-spacing: 2px;
+    padding-left: 54px;
+}
+.form-input button{
+    width: 40%;
+    margin: 5px 0 25px;
+}
+.btn-success{
+    background-color: #1c6288;
+    font-size: 19px;
+    border-radius: 5px;
+    padding:7px 14px ;
+    border: 1px solid #daf1ff;
+}
+.btn-sucess:hover{
+    background-color: #13445e;
+    border: 1px solid #daf1ff;
+}
+h1{
+    color: #13445e;
+   
+}

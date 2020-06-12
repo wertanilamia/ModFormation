@@ -1,0 +1,97 @@
+
+<div class="container">
+    <form [formGroup]="upForm" (ngSubmit)="edituser()">
+        <h1>mise à jour utilisateur </h1>
+        <br/>
+       
+        <div class="form-group">
+            <label class="control-label"> Identifiant:</label>
+            <input type="text" class="form-control"  formControlName="identifiant"  name="identifiant"  >
+            <div *ngIf="identifiant.touched && identifiant.invalid">
+                <small *ngIf="identifiant.errors.required" class="text-danger"> Identifiant est obligatoire</small><br/>
+                
+                <small *ngIf="identifiant.errors.minlength" class="text-danger"> Identifiant doit contenir au minimum deux caractères</small>
+               
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"> Nom:</label>
+            <input type="text" class="form-control" formControlName="nom"  name="nom" >
+          <div *ngIf="nom.touched&& nom.invalid">
+               <small *ngIf="nom.errors.required" class="text-danger">Nom est obligatoire</small><br/>
+             
+               <small *ngIf="nom.errors.minlength" class="text-danger">Nom doit contenir au minimum deux caractères</small>
+          </div>
+        </div>
+           
+           
+        <div class="form-group">
+            <label class="control-label"> Prénom:</label>
+            <input type="text" class="form-control"   formControlName="prenom" name="prenom"  >
+         <div *ngIf="prenom.touched&& prenom.invalid">
+          <small *ngIf="prenom.errors.required" class="text-danger">Prénom est obligatoire </small><br/>
+          
+          <small *ngIf="prenom.errors.minlength" class="text-danger">Prénom doit contenir au minimum deux caractères</small>
+        </div>
+       
+        </div>
+       
+       
+         
+        <div class="form-group">
+            <label class="control-label"> Direction:</label>
+            <input type="text" class="form-control" formControlName="direction"  name="direction"  >
+          <div *ngIf="direction.touched && direction.invalid">
+              <small *ngIf="direction.errors.required" class="text-danger">Direction est obligatoire</small><br/>
+              
+              <small *ngIf="direction.errors.minlength" class="text-danger">Direction doit contenir au minimum deux caractères</small>
+          </div>
+        </div>
+       
+        <div class="form-group">
+            <label class="control-label"> Grade:</label>
+            <input type="text" class="form-control" formControlName="grade"  name="grade"  >
+           <div *ngIf="grade.touched &&grade.invalid">
+               <small *ngIf=" grade.errors.required" class="text-danger">Grade est obligatoire</small><br/>
+              
+               <small *ngIf=" grade.errors.minlength" class="text-danger">Grade doit contenir au minimum deux caractères </small>
+           </div>
+       
+        </div>
+
+       
+        <div class="form-group">
+            <label class="control-label">  Numéro de téléphone:</label>
+            <input type="text" class="form-control"   formControlName="numerotelephone" name="numerotelephone"  >
+       <div *ngIf="numerotelephone.touched &&numerotelephone.invalid">
+           <small *ngIf="numerotelephone.errors.required" class="text-danger"> Numéro de téléphone est obligatoire</small><br/>
+           
+           <small *ngIf="numerotelephone.errors.minlength" class="text-danger"> Numéro de téléphone doit contenir au minimum deux caractères</small>
+       </div>
+        </div>
+    
+   
+            <div class="form-group">
+                <label class="control-label"> Adresse E-mail:</label>
+                <input type="email" class="form-control"formControlName="email" name="email"  >
+                <div *ngIf="email.touched && email.invalid">
+                    <small *ngIf="email.errors.required" class="text-danger">Adresse E-mail est obligatoire</small><br/>
+                  
+                    <small *ngIf="email.errors.minlength" class="text-danger">Adresse E-mail doit contenir au minimum deux caractères </small>
+                </div>
+        </div>
+        
+         <br/>
+         <button type="Submit"  class="btn btn-primary " [disabled]="!upForm.valid"> Enregistrer</button>
+         <button type="button" class="btn btn-primary" (click)="goBack()">Annuler</button>
+         
+         <br/>
+    
+    </form>
+
+
+
+
+</div>
+

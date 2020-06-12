@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel panel-primary ">
+        <div class="panel-heading">Liste des convocations recues </div>
+        <div class="panel-body">
+            <table class="StandardTable">
+                <thead >
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Envoyer de</th>
+                    <th scope="col">Date Envoi</th>
+                    <th scope="col">Actions</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cr of listConvocationRecus">
+                    <td>{{cr.theme}}</td>
+                   <td>{{cr.orgformateur}}</td>
+                   <td>
+                       <a class="clickable"> Voir</a>
+                       <a class="clickable">Supprimer</a>
+                   </td>
+                  
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+</div>

@@ -1,0 +1,192 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+    <form [formGroup]="addfiche" #addF="ngForm"  >
+      <h1>Fiche de besoins en formation</h1>
+      <br>
+      <div class="allCol">
+      <div class="col1" style="padding-left: 15px;">
+        <p class="P1"> UNITE D'AFFECTATION:</p>
+        <div class="row">
+          <label for="DirectionAeroport" style="margin-right: 5px;">Direction/Aéroport: </label><br/>
+          <input type="text">
+          <button type="button"  (click)="showDirection()"class="btn btn-info " style="margin-left: 5px;" data-toggle="modal" data-target="#myModal">Direction/Aéroport</button>  
+        </div>
+        <!--Modal-->
+  <div class="modal fade " tabindex="-1" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-style: italic; align-content: center;">Liste de direction</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <table table-striped >
+           <thead>
+             <tr>
+               <th>ID</th>
+               <th>Direction</th>
+               <th></th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr  *ngFor="let dir of listDirection?.content">
+              <td>{{dir.idirect}}</td>
+              <td>{{dir.nomdirect}}</td>
+                <td>
+                <input type="checkbox" name="checkdirection" id="checkdirection" >
+              </td>
+             </tr>
+           </tbody>
+         </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" style="width: 20%; height: 40px;"  >Valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+ <label for="Division" style="margin-right: 85px;">Division:</label>
+ <div class="form-group">
+ <input type="text" name="Division" id="Division" class="form-control" formControlName="Division" >
+ </div>
+  </div>
+ <div class="row">
+  <label for="Service" style="margin-right: 89px;">Service:</label>
+ <div class="form-group">
+   <input type="text " id="Service" name="Service" class="form-control" formControlName="Service" >
+ </div>
+ </div>
+ <p class="P2">IDENTIFIANTS DU BENEFICIAIRE</p>
+ <div class="row">
+<label for="matricule" style="margin-right: 76px;">Matricule:</label>
+<div class="form-group">
+  <input type="text" name="matricule" id="matricule" class="form-control" formControlName="matricule">
+</div>
+ </div>
+ <div class="row">
+  <label for="nom" style="margin-right: 108px;">Nom:</label>
+  <div class="form-group">
+    <input type="text" name="nom" id="nom" class="form-control" formControlName="nom">
+  </div>
+   </div>
+   <div class="row">
+    <label for="prenom" style="margin-right: 89px;">Prénom:</label>
+    <div class="form-group">
+      <input type="text" name="prenom" id="prenom" class="form-control" formControlName="prenom">
+    </div>
+     </div>
+     <div class="row">
+      <label for="emploi" style="margin-right: 94px;">Emploi:</label>
+      <div class="form-group">
+        <input type="text" name="emploi" id="emploi" class="form-control" formControlName="emploi">
+      </div>
+       </div>
+       <div class="row">
+        <label for="filiere" style="margin-right: 98px;">Filière:</label>
+        <div class="form-group">
+          <input type="text" name="filiere" id="filiere" class="form-control" formControlName="filiere">
+        </div>
+         </div>
+      
+      </div>
+      <div class="col2" style="padding-left: 10px;">
+        <div class="row">
+          <label for="tachesprincipales" style="margin-right: 80px">Taches Principales:</label>
+          <div class="form-group">
+            <input type="text" name="tachesprincipales" id="tachesprincipales" class="form-control" formControlName="tachesprincipales">
+          </div>
+           </div>
+           <div class="row">
+            <label for="theme" style="margin-right: 85px">Théme proposé: :</label>
+            <div class="form-group">
+              <input type="text" name="theme" id="theme" class="form-control" formControlName="theme">
+            </div>
+             </div>
+
+             <h2 class="titre1" style="font-size: 15px;font-weight: bold;font-style: italic; "> Compétences actuelles nécessaires</h2>
+            
+             <div class="form-row">
+              <p>
+                <label class="label1" style="margin-right: 5px;"> Niveau actuel:</label> 
+                 <select name="niveau-actuel" id="niveau-actuel" style="margin-right: 20px;">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                   <option value="4">4</option>
+              </select>
+              <label class="label2" style="margin-right: 5px;">Niveau requis:</label>
+              <select name="niveau-requis" id="niveau-requis">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              </p>
+          </div> 
+          
+          <h2 class="titre2" style="font-size: 15px;font-weight: bold;font-style: italic; " > Nouvelles Compétences à acquérir</h2>
+            
+          <div class="form-row">
+            <p>
+          <label class="label3" style="margin-right: 5px;" > Niveau actuel:</label> 
+          <select name="niveau-actuel" id="niveau-actuel" style="margin-right: 20px;">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          
+          <label class="label4" style="margin-right: 5px;" >Niveau requis:</label>
+          <select name="niveau-requis" id="niveau-requis">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+           <option value="4">4</option>
+          </select>
+          </p>
+          </div>
+          
+          <p class="P4">
+            Type de formation demandé:
+            <select name="type de formation" id="type de formation">
+          
+              <option value="intra-entreprise">Intra-Entreprise</option>
+              <option value="inter-entreprise">Inter-Entreprise</option>
+              <option value="cour du soir">Cour Du Soir</option>
+               <option value="a l'etranger"> A l'étranger</option>
+               <option value="e-learning">E-learning</option> 
+               <option value="diplomante"> Diplomante</option>
+            </select>
+          </p>
+          
+          <p class="P3">
+            Niveau demandé:
+            <br>
+          <!--l'attribut name aide a identifier par la suite la case qui a était cocher-->
+          <input type="checkbox" name="de base" id="de base"/>
+          <label for="de base"> De Base</label><br/>
+          <input type="checkbox" name="De Perfectionnement" id="De Perfectionnement"/>
+          <label for="De Perfectionnement"> De Perfectionnement</label><br/>
+          <input type="checkbox" name="Pousse" id="Pousse"/>
+          <label for="Pousse">Pousse</label>
+          </p>
+          <hr>
+         <div class="row" style="margin-left: 54%;">
+              <button type="button" class="btn btn-light"style="margin-right: 10px;" >Annuler</button> 
+              <button type="button" class="btn btn-primary" >Envoyer</button>
+         </div>
+          
+          
+                    
+      </div>
+      </div>
+  </form>
+  </div>
+</div>
+</div>
+  

@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="card">
+          <h1> Liste des commandes</h1>
+        </div>
+        <div class="card">
+            <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <input style="border-color: gray;  height: 35px;" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="mcCom">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="button" (click)="ChercherCommande()">Search</button>
+              
+            </div>
+            <div class="col text-right">
+              <button type="button"  class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/commande']">Ajouter</button>
+            </div>
+             </div>
+           </div>
+          </div>
+             <div class="card">
+                <div class="card-body">
+            <table class="table StandardTable table-sm ">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Organisme formateur</th>
+                    <th scope="col">Date envoi</th>
+                    <th scope="col"  class="text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  *ngFor="let cm of listcommandes?.content">
+                    <th >{{cm.idcom}}</th>
+                    <td>{{cm.organismeformateur}}</td>
+                    <td>{{cm.dateEnvoi}}</td>
+                    <td>
+                        <button  style="width: 90px; height: 30px;" class="badge badge-pill badge-warning" (click)="onEditCommande(cm.idcom)">Editer</button>
+                        <button style="width: 90px; height: 30px;" class="badge badge-pill badge-secondary">Imprimer</button>
+                        <button style="width: 90px; height: 30px;" class="badge badge-pill badge-danger" (click)="onDeleteCommande(cm)" >Supprimer</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav aria-label="...">
+                <ul class="pagination  justify-content-center pagination-sm">
+                  <li class="page-item " aria-current="page" *ngFor="let pc of pages; let i=index" >
+                    <span class="page-link">
+                        <a class="clickable" (click)="nextPagecm(i)" >{{i}}</a>
+                      
+                    </span>
+                  </li>
+                </ul>
+              </nav>
+          
+              </div>
+
+              </div>
+    
+</div>
